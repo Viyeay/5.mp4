@@ -72,7 +72,7 @@ if (video) {
         setTimeout(() => {
 
             window.open(
-                "https://demolishwrestconclusions.com/qaad6q48q8?key=ef7ab08b70a80abbee549f89988c2543",
+                "https://hai8g.com/4/11865677",
                 "_blank"
             );
 
@@ -116,7 +116,7 @@ if (video) {
 
         // Klik / tap apa pun → Shopee
         window.open(
-            "https://s.shopee.co.id/7AdaIQqhTG",
+            "https://s.shopee.co.id/9AP1EmARWh",
             "_blank"
         );
 
