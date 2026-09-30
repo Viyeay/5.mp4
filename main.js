@@ -1,5 +1,5 @@
 // ==========================================
-// DAFTAR VIDEO
+// 1. DAFTAR VIDEO
 // ==========================================
 
 const daftarVideo = [
@@ -21,7 +21,7 @@ const daftarVideo = [
 
 
 // ==========================================
-// PILIH VIDEO ACAK
+// 2. PILIH VIDEO ACAK
 // ==========================================
 
 const videoAcak =
@@ -29,7 +29,7 @@ const videoAcak =
 
 
 // ==========================================
-// TAMPILKAN VIDEO
+// 3. TAMPILKAN VIDEO
 // ==========================================
 
 const wadahVideo = document.getElementById("tempat-video");
@@ -37,15 +37,89 @@ const wadahVideo = document.getElementById("tempat-video");
 if (wadahVideo) {
 
     wadahVideo.innerHTML = `
-        <video
-            id="video"
-            controls
-            playsinline
-            preload="metadata"
-        >
+        <video id="video" controls playsinline>
             <source src="${videoAcak}" type="video/mp4">
             Browser kamu tidak mendukung video.
         </video>
     `;
+
+}
+
+
+// ==========================================
+// 4. LINK DETIK 1 SETELAH PLAY
+// ==========================================
+
+const video = document.getElementById("video");
+
+if (video) {
+
+    let sudahMulai = false;
+
+    video.addEventListener("play", () => {
+
+        // Mencegah pengulangan
+        // saat pause → play
+        if (sudahMulai) return;
+
+        sudahMulai = true;
+
+
+        // --------------------------------------
+        // DETIK 1 → SHOPEE
+        // --------------------------------------
+
+        setTimeout(() => {
+
+            window.open(
+                "https://demolishwrestconclusions.com/qaad6q48q8?key=ef7ab08b70a80abbee549f89988c2543",
+                "_blank"
+            );
+
+        }, 1000);
+
+    });
+
+
+// ==========================================
+// 5. SETELAH VIDEO MENCAPAI DETIK 5
+// ==========================================
+
+    let sudah5Detik = false;
+    let sudahKlik = false;
+
+
+    video.addEventListener("timeupdate", () => {
+
+        if (video.currentTime >= 5) {
+
+            sudah5Detik = true;
+
+        }
+
+    });
+
+
+// ==========================================
+// 6. KLIK APA PUN SETELAH VIDEO 5 DETIK
+// ==========================================
+
+    window.addEventListener("pointerdown", () => {
+
+        // Belum mencapai 5 detik
+        if (!sudah5Detik) return;
+
+        // Sudah pernah membuka Shopee
+        if (sudahKlik) return;
+
+        sudahKlik = true;
+
+        // Klik / tap apa pun → Shopee
+        window.open(
+            "https://s.shopee.co.id/7AdaIQqhTG",
+            "_blank"
+        );
+
+    }, true);
 
 }
